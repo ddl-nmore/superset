@@ -20,11 +20,11 @@ export PYTHONPATH=$DOMINO_WORKING_DIR:$PYTHONPATH
 # that users can copy over a prewritten superset config and that will be used
 # without being modified
 echo "Checking for existing Superset config..."
-if [ ! -f $SUPERSET_HOME/superset_config.py ]; then
+if [ ! -f $SUPERSET_HOME/superset_config_tmp.py ]; then
   echo "No Superset config found, creating from environment"
-  touch $SUPERSET_HOME/superset_config.py
+  touch $SUPERSET_HOME/superset_config_tmp.py
 
-  cat > $SUPERSET_HOME/superset_config.py <<EOF
+  cat > $SUPERSET_HOME/superset_config_tmp.py <<EOF
 
 from flask import redirect, g, flash, request
 from flask_appbuilder.security.views import UserDBModelView,AuthDBView
