@@ -8,7 +8,7 @@
 # export LANG=C.UTF-8
 
 export SUPERSET_HOME=$DOMINO_WORKING_DIR
-export SUP_META_DB_URI=sqlite:///$DOMINO_WORKING_DIR/superset.db
+#export SUP_META_DB_URI=sqlite:///$DOMINO_WORKING_DIR/superset.db
 
 #export ADDITIONAL_LAUNCH_OPTIONS="--debugger"
 export ADDITIONAL_LAUNCH_OPTIONS=""
