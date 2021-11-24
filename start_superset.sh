@@ -63,7 +63,7 @@ class CustomSecurityManager(SupersetSecurityManager):
     def __init__(self, appbuilder):
         super(CustomSecurityManager, self).__init__(appbuilder)
 
-CUSTOM_SECURITY_MANAGER = CustomSecurityManager
+#CUSTOM_SECURITY_MANAGER = CustomSecurityManager
 
 CSV_EXTENSIONS = {"csv", "tsv", "txt", "tab"}
 
