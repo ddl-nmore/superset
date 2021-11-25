@@ -73,7 +73,7 @@ export ADDITIONAL_LAUNCH_OPTIONS=""
 
 
 # set up Superset if we haven't already
-if [ ! -f $SUPERSET_HOME/.setup-complete-2 ]; then
+if [ ! -f $SUPERSET_HOME/.setup-complete ]; then
 
   echo "Running first time setup for Superset"
   superset fab create-admin --username admin --password superset --firstname Admin --lastname Superset --email superset+admin@example.com
@@ -87,7 +87,7 @@ if [ ! -f $SUPERSET_HOME/.setup-complete-2 ]; then
   echo "Creating default roles and permissions"
   superset init
 
-  touch $SUPERSET_HOME/.setup-complete-2
+  touch $SUPERSET_HOME/.setup-complete
 
 else
   # always upgrade the database, running any pending migrations
